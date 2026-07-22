@@ -1,4 +1,4 @@
-# Visual Art — Moj
+# Visual Art — Mojdeh Mirzaei
 
 A static portfolio site for a multidisciplinary artist, organized around
 **collections**: bodies of work grouped by shared name, concept, or medium,
