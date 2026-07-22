@@ -23,9 +23,11 @@ assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-Four placeholder collections are included as examples of how the layout
-works: **Fragments of Memory**, **Liminal Spaces**, **Woven Silence**, and
-**Static Noise**. Replace their names, statements, and images with real work.
+**In-Between-ness** is the first real collection, with real paintings and
+the artist's own statement. The other four — **Fragments of Memory**,
+**Liminal Spaces**, **Woven Silence**, and **Static Noise** — are still
+placeholder examples of how the layout works; replace their names,
+statements, and images with real work as it's ready.
 
 ## Editing content
 
@@ -51,6 +53,14 @@ Put image files under a folder like `assets/images/<collection-slug>/` and
 reference them with a relative path. The lightbox (click-to-enlarge) and
 grid sizing work automatically once real `<img>` tags replace the
 placeholders — no other markup needs to change.
+
+`collections/in-between-ness.html` follows this pattern already: three
+finished pieces in `assets/images/in-between-ness/`, plus five
+"Coming Soon" placeholder tiles at the end of the gallery for work still in
+progress. As each new piece is finished, drop the image file into that
+folder and swap the next placeholder tile for an `<img>` tag the same way.
+If more than five are needed, just add more `<figure>` entries — nothing
+else has to change.
 
 **Adding a new collection**
 
