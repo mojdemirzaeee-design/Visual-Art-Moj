@@ -23,11 +23,11 @@ assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-**In-Between-ness** is the first real collection, with real paintings and
-the artist's own statement. The other four — **Fragments of Memory**,
-**Liminal Spaces**, **Woven Silence**, and **Static Noise** — are still
-placeholder examples of how the layout works; replace their names,
-statements, and images with real work as it's ready.
+**In-Between-ness** and **Hands Series** are real collections, with real
+artwork and the artist's own statements. The other four — **Fragments of
+Memory**, **Liminal Spaces**, **Woven Silence**, and **Static Noise** —
+are still placeholder examples of how the layout works; replace their
+names, statements, and images with real work as it's ready.
 
 ## Editing content
 
@@ -54,13 +54,21 @@ reference them with a relative path. The lightbox (click-to-enlarge) and
 grid sizing work automatically once real `<img>` tags replace the
 placeholders — no other markup needs to change.
 
-`collections/in-between-ness.html` follows this pattern already: three
-finished pieces in `assets/images/in-between-ness/`, plus five
-"Coming Soon" placeholder tiles at the end of the gallery for work still in
-progress. As each new piece is finished, drop the image file into that
+Both real collections follow this pattern already:
+
+- `collections/in-between-ness.html` — three finished pieces in
+  `assets/images/in-between-ness/`, plus five "Coming Soon" tiles for work
+  still in progress.
+- `collections/hands-series.html` — five drawings in
+  `assets/images/hands-series/`, split into two sections (Rapid Drawings
+  and Ceramic Sculptures), with five "Coming Soon" tiles awaiting photos
+  of the ceramic work.
+
+As each new piece is ready, drop the image file into the collection's
 folder and swap the next placeholder tile for an `<img>` tag the same way.
-If more than five are needed, just add more `<figure>` entries — nothing
-else has to change.
+If more slots are needed, just add more `<figure>` entries — nothing else
+has to change. Images display in full at any orientation, so no cropping
+or resizing is required before adding them.
 
 **Adding a new collection**
 

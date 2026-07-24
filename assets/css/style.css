@@ -363,31 +363,33 @@ section { padding: var(--space-5) 0; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-2);
+  gap: var(--space-3) var(--space-2);
+  align-items: start;
 }
 
+/* Artwork keeps its own proportions — no fixed box, no cropping, no
+   letterbox bars, whatever orientation the piece happens to be. */
 .gallery-grid figure {
   margin: 0;
-  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-line);
 }
-
-.gallery-grid > figure:nth-child(3n+1) { aspect-ratio: 4 / 5; }
-
-.gallery-grid figure .placeholder-tile { width: 100%; height: 100%; border: none; }
 
 .gallery-grid figure img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
   cursor: zoom-in;
   transition: transform 0.4s ease;
 }
 
 .gallery-grid figure:hover img { transform: scale(1.03); }
+
+/* Empty slots have no intrinsic size, so they get a fixed square. */
+.gallery-grid figure .placeholder-tile {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
 
 @media (max-width: 900px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
