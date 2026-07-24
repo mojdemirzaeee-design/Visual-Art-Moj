@@ -356,6 +356,18 @@ section { padding: var(--space-5) 0; }
   max-width: 18ch;
 }
 
+.subsection-label {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.subsection-label:first-of-type { margin-top: 0; }
+
 .pull-quote {
   margin: 0 0 var(--space-4);
   padding-left: var(--space-3);

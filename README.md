@@ -31,7 +31,7 @@ and navigation entry:
 
 | Collection | Works | Images |
 |---|---|---|
-| `in-between-ness.html` | 7 works + 1 open slot, 4 cut playing card works, plus The Clown Section and The Parrot Section | `assets/images/in-between-ness/` |
+| `in-between-ness.html` | 4 works + 1 open slot, 4 cut playing card works, The Clown Section, The Parrot Section, and Practice & Process | `assets/images/in-between-ness/` (process images in `process/`) |
 | `hands-series.html` | 5 drawings + 3 ceramic sculptures | `assets/images/hands-series/` |
 
 **Illustration** (`illustration.html`)
