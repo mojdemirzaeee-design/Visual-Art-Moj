@@ -29,15 +29,13 @@ and years taken from the artist's portfolio:
 | Collection | Works | Images |
 |---|---|---|
 | `in-between-ness.html` | 3 paintings/drawings + 5 open slots | `assets/images/in-between-ness/` |
-| `clowns-series.html` | 5 drawings + 4 folded playing cards | `assets/images/clowns-series/` |
+| `clowns-series.html` | 5 drawings + 4 cut playing cards | `assets/images/clowns-series/` |
 | `hands-series.html` | 5 drawings + 3 ceramic sculptures | `assets/images/hands-series/` |
 | `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
 | `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
 
-**Statements** are only on In-Between-ness and Hands Series. The other
-three pages carry an `<!-- EDIT ME -->` comment where the statement
-belongs; paste in a `<section>` with a `.statement` block, copying the
-markup from `hands-series.html`.
+Every collection carries the artist's statement. Clowns Series has two:
+one for the series and one for the Cut Playing Cards works within it.
 
 ## Editing content
 
