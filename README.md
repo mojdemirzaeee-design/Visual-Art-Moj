@@ -23,63 +23,65 @@ assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-**In-Between-ness** and **Hands Series** are real collections, with real
-artwork and the artist's own statements. The other four — **Fragments of
-Memory**, **Liminal Spaces**, **Woven Silence**, and **Static Noise** —
-are still placeholder examples of how the layout works; replace their
-names, statements, and images with real work as it's ready.
+All five collections hold real artwork, with titles, media, dimensions
+and years taken from the artist's portfolio:
+
+| Collection | Works | Images |
+|---|---|---|
+| `in-between-ness.html` | 3 paintings/drawings + 5 open slots | `assets/images/in-between-ness/` |
+| `clowns-series.html` | 5 drawings + 4 folded playing cards | `assets/images/clowns-series/` |
+| `hands-series.html` | 5 drawings + 3 ceramic sculptures | `assets/images/hands-series/` |
+| `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
+| `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
+
+**Statements** are only on In-Between-ness and Hands Series. The other
+three pages carry an `<!-- EDIT ME -->` comment where the statement
+belongs; paste in a `<section>` with a `.statement` block, copying the
+markup from `hands-series.html`.
 
 ## Editing content
 
-Every editable spot is marked with an `<!-- EDIT ME -->` comment in the
-HTML. There are three kinds of edits:
+**Text** — statements, captions, bio and contact details are plain HTML in
+each page. Open the file, find the relevant block, and rewrite it.
 
-**Text** — statements, bios, exhibition lists, and contact info are plain
-HTML in each page. Open the file, find the relevant paragraph, and rewrite it.
-
-**Images** — artwork is currently shown as placeholder tiles:
+**Adding a work** — drop the image file into the collection's folder under
+`assets/images/<collection-slug>/` and add a figure to the gallery:
 
 ```html
-<div class="placeholder-tile">No. 1</div>
+<figure data-label="Title — Medium, Year">
+  <img src="../assets/images/hands-series/06.jpg" alt="Short description of the work" />
+  <figcaption><span class="work-title">Title</span>Medium · 21 × 29.7 cm · 2024</figcaption>
+</figure>
 ```
 
-Swap that for a real image once you have a file:
+`data-label` is the caption shown when the image is opened full-size.
+Images display at their own proportions, so no cropping or resizing is
+needed before adding them — any orientation works.
+
+**Several views of one work** — wrap the figures in a `.work-group` so the
+grid reads as a single sculpture rather than separate pieces (see the
+ceramics in `hands-series.html`).
+
+**Empty slots** — In-Between-ness ends with five "Coming Soon" tiles for
+work in progress:
 
 ```html
-<img src="../assets/images/fragments-of-memory/01.jpg" alt="Fragments of Memory, No. 1, 2023" />
+<figure data-label="In-Between-ness — Coming Soon"><div class="placeholder-tile">Coming Soon</div></figure>
 ```
 
-Put image files under a folder like `assets/images/<collection-slug>/` and
-reference them with a relative path. The lightbox (click-to-enlarge) and
-grid sizing work automatically once real `<img>` tags replace the
-placeholders — no other markup needs to change.
-
-Both real collections follow this pattern already:
-
-- `collections/in-between-ness.html` — three finished pieces in
-  `assets/images/in-between-ness/`, plus five "Coming Soon" tiles for work
-  still in progress.
-- `collections/hands-series.html` — ten pieces in
-  `assets/images/hands-series/`, split into two sections: five rapid
-  drawings (`01.jpg`–`05.jpg`) and five ceramic sculptures
-  (`ceramic-01.jpg`–`ceramic-05.jpg`).
-
-As each new piece is ready, drop the image file into the collection's
-folder and swap the next placeholder tile for an `<img>` tag the same way.
-If more slots are needed, just add more `<figure>` entries — nothing else
-has to change. Images display in full at any orientation, so no cropping
-or resizing is required before adding them.
+Swap one for a real `<figure>` as each piece is finished, or delete any
+that end up unused.
 
 **Adding a new collection**
 
-1. Copy an existing file in `collections/` (e.g. `static-noise.html`) to a
-   new file named after the collection, e.g. `collections/new-collection.html`.
+1. Copy an existing file in `collections/` to a new file named after the
+   collection.
 2. Update the `<title>`, the collection header (name, medium, years), the
    statement, and the gallery.
-3. Update the `collection-nav` links at the bottom to point to the correct
-   previous/next collection.
-4. Add a card for it in `collections/index.html` and, if it should be
-   featured, in `index.html`.
+3. Fix the `collection-nav` links at the bottom of the neighbouring pages
+   so the previous/next chain stays correct.
+4. Add a card in `collections/index.html` and in `index.html`, and update
+   the collection counts on both.
 
 ## Design notes
 
