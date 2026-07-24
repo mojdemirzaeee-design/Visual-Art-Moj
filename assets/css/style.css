@@ -211,6 +211,12 @@ a {
   color: var(--color-bg);
 }
 
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
 .text-link {
   font-size: 0.85rem;
   letter-spacing: 0.08em;

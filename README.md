@@ -14,25 +14,39 @@ python3 -m http.server 8000
 ## Structure
 
 ```
-index.html                     Home page (hero + featured collections)
-about.html                     Bio + exhibition history
+index.html                     Home page (hero + both practices)
+visual-art.html                Visual art collections, grid view
+illustration.html              Illustration projects, grid view
+about.html                     Bio + background
 contact.html                   Contact details
-collections/index.html         All collections, grid view
 collections/*.html             One page per collection
 assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-All five collections hold real artwork, with titles, media, dimensions
-and years taken from the artist's portfolio:
+The work is split into two practices, each with its own top-level page
+and navigation entry:
+
+**Visual Art** (`visual-art.html`)
 
 | Collection | Works | Images |
 |---|---|---|
 | `in-between-ness.html` | 3 paintings/drawings + 5 open slots | `assets/images/in-between-ness/` |
-| `clowns-series.html` | 5 drawings + 4 cut playing cards | `assets/images/clowns-series/` |
 | `hands-series.html` | 5 drawings + 3 ceramic sculptures | `assets/images/hands-series/` |
+
+**Illustration** (`illustration.html`)
+
+| Collection | Works | Images |
+|---|---|---|
+| `clowns-series.html` | 5 drawings + 4 cut playing cards | `assets/images/clowns-series/` |
 | `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
 | `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
+
+All collection pages live in `collections/`, regardless of which practice
+they belong to. What assigns a collection to a practice is (a) the card
+listing it on `visual-art.html` or `illustration.html`, (b) which nav item
+carries `aria-current="page"` on its own page, and (c) its prev/next links,
+which stay inside its own group.
 
 Every collection carries the artist's statement. Clowns Series has two:
 one for the series and one for the Cut Playing Cards works within it.
@@ -78,8 +92,9 @@ that end up unused.
    statement, and the gallery.
 3. Fix the `collection-nav` links at the bottom of the neighbouring pages
    so the previous/next chain stays correct.
-4. Add a card in `collections/index.html` and in `index.html`, and update
-   the collection counts on both.
+4. Add a card on `visual-art.html` or `illustration.html` (whichever
+   practice it belongs to) and on `index.html`, and update the
+   `Visual Art — 01 / 02` style counts on the pages in that group.
 
 ## Design notes
 
