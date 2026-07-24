@@ -31,14 +31,14 @@ and navigation entry:
 
 | Collection | Works | Images |
 |---|---|---|
-| `in-between-ness.html` | 3 paintings/drawings + 5 open slots | `assets/images/in-between-ness/` |
+| `in-between-ness.html` | 3 paintings/drawings + 5 open slots, plus 4 cut playing card works | `assets/images/in-between-ness/` |
 | `hands-series.html` | 5 drawings + 3 ceramic sculptures | `assets/images/hands-series/` |
 
 **Illustration** (`illustration.html`)
 
 | Collection | Works | Images |
 |---|---|---|
-| `clowns-series.html` | 5 drawings + 4 cut playing cards | `assets/images/clowns-series/` |
+| `clowns-series.html` | 5 drawings | `assets/images/clowns-series/` |
 | `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
 | `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
 
