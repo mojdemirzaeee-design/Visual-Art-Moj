@@ -59,10 +59,10 @@ Both real collections follow this pattern already:
 - `collections/in-between-ness.html` — three finished pieces in
   `assets/images/in-between-ness/`, plus five "Coming Soon" tiles for work
   still in progress.
-- `collections/hands-series.html` — five drawings in
-  `assets/images/hands-series/`, split into two sections (Rapid Drawings
-  and Ceramic Sculptures), with five "Coming Soon" tiles awaiting photos
-  of the ceramic work.
+- `collections/hands-series.html` — ten pieces in
+  `assets/images/hands-series/`, split into two sections: five rapid
+  drawings (`01.jpg`–`05.jpg`) and five ceramic sculptures
+  (`ceramic-01.jpg`–`ceramic-05.jpg`).
 
 As each new piece is ready, drop the image file into the collection's
 folder and swap the next placeholder tile for an `<img>` tag the same way.
