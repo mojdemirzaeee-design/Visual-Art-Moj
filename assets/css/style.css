@@ -356,6 +356,29 @@ section { padding: var(--space-5) 0; }
   max-width: 18ch;
 }
 
+.pull-quote {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-accent);
+  max-width: 52ch;
+}
+
+.pull-quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.45;
+  margin: 0 0 0.6rem;
+}
+
+.pull-quote cite {
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
 .credit-line {
   margin: 0;
   font-size: 0.85rem;
