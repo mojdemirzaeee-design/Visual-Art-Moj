@@ -24,7 +24,7 @@ assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-The work is split into two practices, each with its own top-level page
+The work is split into three sections, each with its own top-level page
 and navigation entry:
 
 **Visual Art** (`visual-art.html`)
@@ -41,6 +41,11 @@ and navigation entry:
 | `clowns-series.html` | 5 drawings | `assets/images/clowns-series/` |
 | `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
 | `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
+
+**Practice** (`practice.html`) holds ongoing studio work that isn't part of
+any single body of work — currently five self-portrait studies in
+`assets/images/practice/self-portraits/`. It has no collection pages of
+its own; works sit directly on the page in sections.
 
 All collection pages live in `collections/`, regardless of which practice
 they belong to. What assigns a collection to a practice is (a) the card
