@@ -455,6 +455,11 @@ section { padding: var(--space-5) 0; }
   align-items: start;
 }
 
+.work-group.cols-3 {
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* Work labels: title, medium, dimensions, year. */
 .gallery-grid figcaption,
 .work-caption {
