@@ -217,6 +217,12 @@ a {
   gap: var(--space-2);
 }
 
+.text-link[href^="mailto:"] {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
 .text-link {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
@@ -575,7 +581,7 @@ section { padding: var(--space-5) 0; }
 .cv-list li:last-child { border-bottom: 1px solid var(--color-line); }
 
 .cv-year {
-  flex: 0 0 4.5rem;
+  flex: 0 0 6.5rem;
   color: var(--color-text-muted);
   font-size: 0.85rem;
 }
