@@ -14,9 +14,11 @@ python3 -m http.server 8000
 ## Structure
 
 ```
-index.html                     Home page (hero + both practices)
+index.html                     Home page (hero + all sections)
 visual-art.html                Visual art collections, grid view
 illustration.html              Illustration projects, grid view
+publications.html              Books, grid view
+practice.html                  Ongoing studio practice
 about.html                     Bio + background
 contact.html                   Contact details
 collections/*.html             One page per collection
@@ -24,7 +26,7 @@ assets/css/style.css           All styling
 assets/js/main.js              Mobile nav + image lightbox
 ```
 
-The work is split into three sections, each with its own top-level page
+The work is split into four sections, each with its own top-level page
 and navigation entry:
 
 **Visual Art** (`visual-art.html`)
@@ -40,18 +42,27 @@ and navigation entry:
 |---|---|---|
 | `clowns-series.html` | 5 drawings | `assets/images/clowns-series/` |
 | `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
+
+**Publications** (`publications.html`) — books written and/or illustrated,
+kept separate from Illustration because a book's status (published,
+forthcoming, out of print) matters in a way a drawing series's doesn't.
+
+| Collection | Works | Images |
+|---|---|---|
 | `the-little-fire-and-the-little-girl.html` | 3 illustrations | `assets/images/little-fire/` |
 
 **Practice** (`practice.html`) holds ongoing studio work that isn't part of
-any single body of work — currently five self-portrait studies in
+any single body of work — currently fifteen self-portrait studies in
 `assets/images/practice/self-portraits/`. It has no collection pages of
 its own; works sit directly on the page in sections.
 
-All collection pages live in `collections/`, regardless of which practice
-they belong to. What assigns a collection to a practice is (a) the card
-listing it on `visual-art.html` or `illustration.html`, (b) which nav item
-carries `aria-current="page"` on its own page, and (c) its prev/next links,
-which stay inside its own group.
+All collection pages live in `collections/`, regardless of which section
+they belong to. What assigns a collection to a section is (a) the card
+listing it on that section's page (`visual-art.html`, `illustration.html`
+or `publications.html`), (b) which nav item carries `aria-current="page"`
+on its own page, and (c) its prev/next links, which stay inside its own
+group — a group of one, like Publications right now, just shows a single
+"All Publications" back-link instead of a prev/next pair.
 
 Every collection carries the artist's statement. Clowns Series has two:
 one for the series and one for the Cut Playing Cards works within it.
