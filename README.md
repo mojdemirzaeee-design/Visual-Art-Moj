@@ -40,8 +40,8 @@ and navigation entry:
 
 | Collection | Works | Images |
 |---|---|---|
-| `clowns-series.html` | 5 drawings | `assets/images/clowns-series/` |
-| `flowers-series.html` | 4 colored pencil drawings | `assets/images/flowers-series/` |
+| `clowns-series.html` | 5 drawings (2 in high resolution from the artist's own photos, 3 still sourced from the portfolio PDF) | `assets/images/clowns-series/` |
+| `flowers-series.html` | 4 colored pencil drawings + 1 companion ceramic sculpture (Masculan only) | `assets/images/flowers-series/` |
 
 **Publications** (`publications.html`) — books written and/or illustrated,
 kept separate from Illustration because a book's status (published,
