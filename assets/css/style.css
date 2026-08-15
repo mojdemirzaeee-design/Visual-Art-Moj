@@ -599,6 +599,12 @@ section { padding: var(--space-5) 0; }
   font-size: 0.95rem;
 }
 
+.cv-list a,
+.statement a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 .cv-list li {
   display: flex;
   gap: var(--space-3);
