@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-expires]").forEach(function (el) {
+    var expires = new Date(el.getAttribute("data-expires") + "T23:59:59");
+    if (Date.now() > expires.getTime()) {
+      el.remove();
+    }
+  });
+
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
 

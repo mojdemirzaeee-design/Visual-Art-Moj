@@ -75,6 +75,26 @@ a {
 
 /* -------------------- Header / Nav -------------------- */
 
+.news-banner {
+  background: var(--color-accent);
+}
+
+.news-banner .container {
+  padding: var(--space-1) var(--space-3);
+}
+
+.news-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #fff;
+}
+
+.news-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .site-header {
   position: sticky;
   top: 0;
