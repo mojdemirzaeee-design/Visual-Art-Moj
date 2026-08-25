@@ -75,24 +75,67 @@ a {
 
 /* -------------------- Header / Nav -------------------- */
 
-.news-banner {
+.book-promo {
   background: var(--color-accent);
 }
 
-.news-banner .container {
-  padding: var(--space-1) var(--space-3);
+.book-promo-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
 }
 
-.news-banner p {
-  margin: 0;
-  font-size: 0.85rem;
-  text-align: center;
+.book-promo-cover {
+  flex: 0 0 auto;
+}
+
+.book-promo-cover img {
+  display: block;
+  width: 110px;
+  height: auto;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.book-promo-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.book-promo-eyebrow {
+  margin: 0 0 0.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.book-promo-text h2 {
+  margin: 0 0 0.35rem;
+  color: #fff;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.book-promo-desc {
+  margin: 0 0 var(--space-2);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.btn-invert {
+  border-color: #fff;
   color: #fff;
 }
 
-.news-banner a {
-  color: #fff;
-  text-decoration: underline;
+.btn-invert:hover {
+  background: #fff;
+  color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .book-promo-inner { flex-direction: column; align-items: flex-start; }
 }
 
 .site-header {
