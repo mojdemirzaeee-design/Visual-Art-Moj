@@ -11,7 +11,7 @@
   --color-text-muted: #5a574f;
   --color-line: #d8d3c8;
   --color-accent: #8a3324;
-  --color-banner-brown: #5c4033;
+  --color-banner-teal: #234548;
 
   --font-serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -32,7 +32,7 @@
   --color-text-muted: #b3ada0;
   --color-line: #322f2a;
   --color-accent: #e0836a;
-  --color-banner-brown: #3d2b22;
+  --color-banner-teal: #182e30;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,7 +43,7 @@
     --color-text-muted: #b3ada0;
     --color-line: #322f2a;
     --color-accent: #e0836a;
-    --color-banner-brown: #3d2b22;
+    --color-banner-teal: #182e30;
   }
 }
 
@@ -79,20 +79,21 @@ a {
 /* -------------------- Header / Nav -------------------- */
 
 .book-promo {
-  background: var(--color-banner-brown);
+  background: var(--color-banner-teal);
 }
 
 .book-promo-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-3);
 }
 
 .book-promo-text {
   flex: 1;
   min-width: 0;
+  padding-top: 0.3rem;
 }
 
 .book-promo-eyebrow {
@@ -126,11 +127,12 @@ a {
 }
 
 .book-promo-covers {
-  flex: 1 1 380px;
-  max-width: 380px;
+  flex: 1 1 300px;
+  max-width: 300px;
   display: block;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16%, black 84%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 16%, black 84%, transparent 100%);
+  margin-top: 0.9rem;
+  -webkit-mask-image: radial-gradient(ellipse 80% 74% at 50% 50%, black 52%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 74% at 50% 50%, black 52%, transparent 100%);
 }
 
 .book-promo-covers:focus-visible {
@@ -142,7 +144,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1400 / 436;
+  aspect-ratio: 1600 / 762;
   object-fit: cover;
 }
 
@@ -175,7 +177,7 @@ a {
     flex: 0 0 auto;
     max-width: 100%;
     width: 100%;
-    margin-top: 0.35rem;
+    margin-top: 1.1rem;
   }
 }
 
