@@ -11,6 +11,7 @@
   --color-text-muted: #5a574f;
   --color-line: #d8d3c8;
   --color-accent: #8a3324;
+  --color-banner-brown: #5c4033;
 
   --font-serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -31,6 +32,7 @@
   --color-text-muted: #b3ada0;
   --color-line: #322f2a;
   --color-accent: #e0836a;
+  --color-banner-brown: #3d2b22;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +43,7 @@
     --color-text-muted: #b3ada0;
     --color-line: #322f2a;
     --color-accent: #e0836a;
+    --color-banner-brown: #3d2b22;
   }
 }
 
@@ -76,7 +79,7 @@ a {
 /* -------------------- Header / Nav -------------------- */
 
 .book-promo {
-  background: var(--color-accent);
+  background: var(--color-banner-brown);
 }
 
 .book-promo-inner {
@@ -123,12 +126,11 @@ a {
 }
 
 .book-promo-covers {
-  flex: 0 0 auto;
-  position: relative;
+  flex: 1 1 380px;
+  max-width: 380px;
   display: block;
-  width: 92px;
-  height: 58px;
-  border-radius: 3px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16%, black 84%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 16%, black 84%, transparent 100%);
 }
 
 .book-promo-covers:focus-visible {
@@ -136,25 +138,12 @@ a {
   outline-offset: 4px;
 }
 
-.book-promo-cover {
-  position: absolute;
-  top: 50%;
-  width: 48px;
-  height: auto;
+.book-promo-panorama {
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
-}
-
-.book-promo-cover--fa {
-  left: 0;
-  transform: translateY(-50%) rotate(-8deg);
-  z-index: 1;
-}
-
-.book-promo-cover--en {
-  left: 38px;
-  transform: translateY(-50%) rotate(7deg);
-  z-index: 2;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 436;
+  object-fit: cover;
 }
 
 .btn-invert {
@@ -182,7 +171,12 @@ a {
 
   .book-promo-text { min-width: 0; }
 
-  .book-promo-covers { margin-top: 0.25rem; }
+  .book-promo-covers {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0.35rem;
+  }
 }
 
 .site-header {
