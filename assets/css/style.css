@@ -82,46 +82,79 @@ a {
 .book-promo-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-3);
-}
-
-.book-promo-cover {
-  flex: 0 0 auto;
-}
-
-.book-promo-cover img {
-  display: block;
-  width: 110px;
-  height: auto;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  padding: var(--space-2) var(--space-3);
 }
 
 .book-promo-text {
   flex: 1;
-  min-width: 220px;
+  min-width: 0;
 }
 
 .book-promo-eyebrow {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.15rem;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
+  opacity: 0.85;
 }
 
 .book-promo-text h2 {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.15rem;
   color: #fff;
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.2;
 }
 
 .book-promo-desc {
-  margin: 0 0 var(--space-2);
+  margin: 0 0 0.65rem;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.book-promo-text .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.68rem;
+}
+
+.book-promo-covers {
+  flex: 0 0 auto;
+  position: relative;
+  display: block;
+  width: 92px;
+  height: 58px;
+  border-radius: 3px;
+}
+
+.book-promo-covers:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.book-promo-cover {
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.book-promo-cover--fa {
+  left: 0;
+  transform: translateY(-50%) rotate(-8deg);
+  z-index: 1;
+}
+
+.book-promo-cover--en {
+  left: 38px;
+  transform: translateY(-50%) rotate(7deg);
+  z-index: 2;
 }
 
 .btn-invert {
@@ -134,8 +167,22 @@ a {
   color: var(--color-accent);
 }
 
-@media (max-width: 640px) {
-  .book-promo-inner { flex-direction: column; align-items: flex-start; }
+.btn-invert:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .book-promo-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-2);
+  }
+
+  .book-promo-text { min-width: 0; }
+
+  .book-promo-covers { margin-top: 0.25rem; }
 }
 
 .site-header {
