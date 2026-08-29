@@ -279,13 +279,6 @@ a {
   margin-bottom: var(--space-2);
 }
 
-.hero-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr);
-  gap: var(--space-3);
-  align-items: center;
-}
-
 .hero-figure img {
   display: block;
   width: 100%;
@@ -293,7 +286,7 @@ a {
 }
 
 .hero-below {
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 .hero h1 {
@@ -301,18 +294,13 @@ a {
   font-weight: 400;
   font-size: clamp(1.4rem, 2.2vw, 1.95rem);
   line-height: 1.14;
-  margin: 0;
-  max-width: 24ch;
+  margin: 0 0 var(--space-3);
+  max-width: 32ch;
 }
 
 @media (max-width: 820px) {
-  .hero-row {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
-
   .hero-below {
-    margin-top: var(--space-4);
+    margin-top: var(--space-3);
   }
 }
 
